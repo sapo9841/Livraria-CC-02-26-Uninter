@@ -42,6 +42,9 @@ header {
     padding: 20px;
     width: 90%;
     max-width: 1200px;
+    margin: 0 auto;       
+    justify-content: center;
+    justify-items: center;
 }
 
 .livro-item {
