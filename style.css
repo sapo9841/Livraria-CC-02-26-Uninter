@@ -1,3 +1,4 @@
+/*Sapo9841 🐸*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #1a1a1a; 
@@ -77,7 +78,8 @@ footer {
     color: #888;
 }
 .livro-item img {
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.5); /* Sombra para dar profundidade */
-    border-radius: 4px 10px 10px 4px;        /* Bordas que lembram a lombada de um livro */
-    border-left: 3px solid rgba(255,255,255,0.1); /* Um brilho sutil na "lombada" */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    border-radius: 4px 10px 10px 4px;        
+    border-left: 3px solid rgba(255,255,255,0.1); 
 }
+/*Sapo9841 🐸*/

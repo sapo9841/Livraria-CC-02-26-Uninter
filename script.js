@@ -1,3 +1,4 @@
+//Sapo9841 🐸
 const livros = [
     { titulo: "A Arte da Estatística", autor: "David Spiegelhalter", arquivo: "Livros/A arte da estatistica_ Como apr - David Spiegelhalter.pdf" },
     { titulo: "Algoritmos: Teoria e Prática", autor: "Thomas Cormen", arquivo: "Livros/Algoritmos Teoria e Pratica - Thomas Cormen.pdf" },
@@ -57,7 +58,7 @@ function mostrarLivros(lista) {
         cartao.classList.add('livro-item');
         
         const nomeBase = livro.arquivo.replace("Livros/", "").replace(".pdf", "");
-        const capaUrl = `capas/${nomeBase}.jpg`;
+        const capaUrl = `Capas/${nomeBase}.jpg`;
 
         cartao.innerHTML = `
             <img src="${capaUrl}" alt="Capa">
@@ -80,3 +81,4 @@ campoBusca.addEventListener('input', () => {
 });
 
 mostrarLivros(livros);
+//Sapo9841 🐸
