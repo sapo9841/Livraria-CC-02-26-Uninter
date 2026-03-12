@@ -4,21 +4,10 @@
     box-sizing: border-box;
 }
 
-:root {
-    --bg-main: #1a1a1a;
-    --bg-surface: #2d2d2d;
-    --bg-input: #333;
-    --text-main: #ffffff;
-    --text-muted: #888;
-    --border-main: #444;
-    --border-accent: #007bff;
-    --content-max: 1200px;
-}
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-main);
-    color: var(--text-main);
+    background-color: #1a1a1a; 
+    color: #ffffff;           
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -27,36 +16,18 @@ body {
     align-items: center;
 }
 
-.container {
-    width: min(var(--content-max), 100%);
-    padding-inline: clamp(10px, 2vw, 24px);
-}
-
 header {
     text-align: center;
-    padding: clamp(24px, 4vw, 40px) 20px;
-    background-color: var(--bg-surface);
+    padding: 40px 20px;
+    background-color: #2d2d2d;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-header h1 {
-    margin: 0;
-    font-size: clamp(1.3rem, 3.2vw, 2rem);
-}
-
-header p {
-    margin: 8px 0 0;
-    font-size: clamp(0.9rem, 1.7vw, 1rem);
-}
-
 .busca-container {
-    margin: clamp(18px, 3vw, 30px) auto;
-    width: min(100%, 640px);
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 10px;
-    align-items: center;
+    margin: 30px auto;
+    width: 95%;
+    max-width: 600px;
 }
 
 #campoBusca {
@@ -64,47 +35,37 @@ header p {
     padding: 12px;
     border-radius: 25px;
     border: none;
-    background-color: var(--bg-input);
-    color: var(--text-main);
-    font-size: clamp(0.95rem, 1.6vw, 1rem);
+    background-color: #333;
+    color: white;
+    font-size: 16px;
     outline: none;
-}
-
-#ordemAlfabetica {
-    padding: 10px 12px;
-    border-radius: 10px;
-    border: 1px solid var(--border-main);
-    background-color: var(--bg-input);
-    color: var(--text-main);
-    font-size: 0.95rem;
-    cursor: pointer;
 }
 
 .grade-livros {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(140px, 28vw, 190px), 1fr));
-    gap: clamp(12px, 2vw, 25px);
-    padding: clamp(10px, 2vw, 20px);
-    width: 100%;
-    max-width: var(--content-max);
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+    gap: 25px;
+    padding: 20px;
+    width: 100%; 
+    max-width: 1200px;
     margin: 0 auto;       
     justify-content: center;    
 }
 
 .livro-item {
-    background-color: var(--bg-surface);
-    padding: clamp(10px, 1.8vw, 15px);
+    background-color: #2d2d2d;
+    padding: 15px;
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease;
     cursor: pointer;
-    border: 1px solid var(--border-main);
+    border: 1px solid #444;
     width: 100%;
 }
 
 .livro-item:hover {
     transform: translateY(-10px); 
-    border-color: var(--border-accent);
+    border-color: #007bff;         
 }
 
 .livro-item img {
@@ -119,7 +80,7 @@ header p {
 }
 
 .livro-item h3 {
-    font-size: clamp(0.82rem, 1.3vw, 0.95rem);
+    font-size: 14px;
     margin: 10px 0;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -130,26 +91,20 @@ header p {
 footer {
     margin-top: auto;
     padding: 20px;
-    color: var(--text-muted);
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .grade-livros {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    }
+    color: #888;
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding-inline: 8px;
+    header h1 {
+        font-size: 1.2rem;
     }
-    .busca-container {
-        grid-template-columns: 1fr;
+    header p {
+        font-size: 0.8rem;
     }
     .grade-livros {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr); 
         gap: 10px;
+        padding: 10px;
     }
     .livro-item {
         padding: 10px;
