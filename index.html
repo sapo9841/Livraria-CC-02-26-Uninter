@@ -18,6 +18,28 @@
             <input type="text" id="campoBusca" placeholder="Pesquisar livro..">
         </div>
 
+        <div class="upload-container">
+            <button class="upload-toggle-btn" id="uploadToggleBtn" aria-expanded="false" aria-controls="uploadPanel">
+                <span class="upload-icon">＋</span> Adicionar Livro PDF
+            </button>
+            <div class="upload-panel" id="uploadPanel" hidden>
+                <div class="upload-form">
+                    <div class="upload-drop-zone" id="uploadDropZone" role="button" tabindex="0" aria-label="Arraste um PDF ou clique para selecionar">
+                        <span class="drop-icon">📄</span>
+                        <p>Arraste um PDF aqui ou <strong>clique para selecionar</strong></p>
+                        <span class="drop-hint">Apenas arquivos PDF · Máximo 200 MB</span>
+                        <input type="file" id="pdfFileInput" accept=".pdf,application/pdf" aria-label="Selecionar arquivo PDF">
+                    </div>
+                    <div class="upload-fields">
+                        <input type="text" id="uploadTitulo" placeholder="Título do livro" maxlength="150" aria-label="Título do livro">
+                        <input type="text" id="uploadAutor" placeholder="Autor" maxlength="100" aria-label="Autor do livro">
+                        <button class="upload-submit-btn" id="uploadSubmitBtn" disabled>Adicionar à estante</button>
+                    </div>
+                    <p class="upload-notice" id="uploadNotice" aria-live="polite"></p>
+                </div>
+            </div>
+        </div>
+
         <div id="estante" class="grade-livros">
             <p>Carregando livros...</p>
         </div>
@@ -27,6 +49,27 @@
         <p>Feito com ❤️ por Sapo9841</p>
     </footer>
 
+    <div class="modal-overlay" id="pdfModal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo" hidden>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-titles">
+                    <h2 id="modalTitulo"></h2>
+                    <span id="modalAutor"></span>
+                </div>
+                <div class="modal-actions">
+                    <a class="modal-download-btn" id="modalDownloadBtn" download aria-label="Baixar PDF">
+                        ⬇ Baixar
+                    </a>
+                    <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fechar leitor">✕</button>
+                </div>
+            </div>
+            <div class="modal-viewer">
+                <iframe id="pdfViewer" title="Leitor de PDF" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
