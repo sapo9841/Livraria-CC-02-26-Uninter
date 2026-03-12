@@ -1,0 +1,6 @@
+./Livros
+/Livros/*
+
+# padrão 
+DS_Store
+.env
