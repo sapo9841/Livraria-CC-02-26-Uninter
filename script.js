@@ -13,6 +13,7 @@ const livros = [
     { titulo: "Amazon AWS Descomplicando a Computação na Nuvem", autor: "Casa do Código", arquivo: "Livros/Amazon AWS - Descomplicando a c - Autor (Casa do Codigo).pdf" },
     { titulo: "Node.js: Aplicações web real time", autor: "Casa do Código", arquivo: "Livros/Aplicacoes web real time com No - Autor (Casa do Codigo).pdf" },
     { titulo: "Apprenticeship Patterns", autor: "Dave Hoover", arquivo: "Livros/Apprenticeship Patterns_ Guidan - Dave Hoover, Adewale Oshineye.pdf" },
+    { titulo: "Aprendendo Python: Um guia básico de programação", autor: "André Backes", arquivo: "Livros/Aprendendo Python - User.pdf" },
     { titulo: "Arquitetura Limpa", autor: "Robert C. Martin", arquivo: "Livros/Arquitetura Limpa (Robert C. Ma - Robert C. Martin.pdf" },
     { titulo: "Automatize Tarefas Maçantes com Python", autor: "Al Sweigart", arquivo: "Livros/Automatize tarefas macantes com - Al Sweigart.pdf" },
     { titulo: "AWS Certified DevOps Engineer", autor: "Adam Book", arquivo: "Livros/AWS Certified DevOps Engineer - - Autor (Adam Book).pdf" },
