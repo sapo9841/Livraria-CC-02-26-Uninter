@@ -66,6 +66,7 @@ const livros = [
     { titulo: "Guia Prático do Servidor Linux", autor: "Casa do Código", arquivo: "Livros/Guia pratico do servidor Linux - Autor (Casa do Codigo).pdf" },
     { titulo: "Head First C", autor: "David Griffiths", arquivo: "Livros/Head First C David Griffiths, D - Desconhecido.pdf" },
     { titulo: "HTML5 e CSS3", autor: "Casa do Código", arquivo: "Livros/HTML5 e CSS3 - domine a web do - Autor (Casa do Codigo).pdf" },
+    { titulo: "Informatica: Conceitos e Aplicações", autor: "Marcelo Marçula", arquivo: "Livros/Informatica-conceitos-marcel - Jesse Brisola.pdf"},
     { titulo: "Introdução à Arquitetura e Design de Software", autor: "Paulo Silveira", arquivo: "Livros/Introducao a arquitetura de des - Autor (Paulo Silveira).pdf" },
     { titulo: "Introdução a Data Science", autor: "Tatiana Escovedo", arquivo: "Livros/Introducao a Data Science_ Algo - Tatiana Escovedo.pdf" },
     { titulo: "Introdução e Boas Práticas em UX Design", autor: "Casa do Código", arquivo: "Livros/Introducao e boas praticas em U - Autor (Casa do Codigo).pdf" },
