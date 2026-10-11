@@ -2,15 +2,40 @@
 Este projeto é uma biblioteca digital interativa desenvolvida para organizar e facilitar o acesso aos materiais de estudo da turma de Ciência da Computação 02/26.
 
 ## 🚀 Funcionalidades
-- **Estante Dinâmica:** Renderização de livros via JavaScript.
-- **Barra de Busca Real-time:** Filtro instantâneo por título ou autor.
+- **Estante Dinâmica:** Renderização de livros via JavaScript, com capa, título e autor.
+- **Busca em tempo real:** Filtro instantâneo por título, autor ou categoria. Ignora acentos e maiúsculas ("programacao" encontra "Programação") e aceita mais de uma palavra.
+- **Categorias:** Filtro por área (Ágil e Gestão, DevOps e Cloud, Web e Mobile, etc.), com contador de livros.
+- **Ordenação:** Por título (A-Z ou Z-A) ou por autor.
+- **Links compartilháveis:** A busca, a categoria e a ordem ficam no endereço (ex.: `?q=docker&cat=DevOps%20e%20Cloud`).
 - **Interface Dark Mode:** Design focado em usabilidade e conforto visual.
-- **Responsividade:** Ajuste automático para diferentes tamanhos de tela.
+- **Responsividade e acessibilidade:** Ajuste automático para diferentes telas, navegação por teclado e textos alternativos nas capas.
 
-## 📂 Como adicionar novos livros
+## 📂 Estrutura
+- `index.html`: estrutura da página.
+- `style.css`: estilos.
+- `script.js`: busca, filtros, ordenação e renderização.
+- `livros.js`: **lista de livros** (é o único arquivo que você precisa editar para adicionar material).
+- `Livros/`: arquivos PDF.
+- `Capas/`: imagens de capa (`.jpg`).
+
+## ➕ Como adicionar novos livros
 1. Adicione o arquivo PDF na pasta `/Livros`.
-2. Adicione a capa em formato `.jpg` na pasta `/Capas` (com o mesmo nome do PDF).
-3. Insira os dados do livro no array `livros` dentro do arquivo `script.js`.
+2. Adicione a capa em formato `.jpg` na pasta `/Capas`, **com o mesmo nome do PDF** (sem a extensão `.pdf`). Se não houver capa, o site mostra uma imagem reserva.
+3. Inclua uma linha no array `livros` do arquivo `livros.js`:
+
+```js
+{ titulo: "Nome do Livro", autor: "Nome do Autor", categoria: "Programação", arquivo: "Livros/nome do arquivo.pdf" },
+```
+
+As categorias são criadas automaticamente a partir do campo `categoria`, então basta repetir o nome de uma categoria existente (ou criar uma nova).
+
+## 💻 Como rodar localmente
+Não precisa instalar nada: basta abrir o `index.html` no navegador. Se preferir um servidor local:
+
+```bash
+python3 -m http.server 8000
+# depois acesse http://localhost:8000
+```
 
 ---
 Feito com ❤️ por Sapo9841.
