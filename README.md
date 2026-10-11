@@ -28,5 +28,15 @@ Este projeto é uma biblioteca digital interativa desenvolvida para organizar e 
 ```
 
 As categorias são criadas automaticamente a partir do campo `categoria`, então basta repetir o nome de uma categoria existente (ou criar uma nova).
+
+## 🔄 Depois de qualquer mudança no site
+O GitHub Pages faz o navegador guardar os arquivos por alguns minutos, então quem já abriu o site pode continuar vendo a versão antiga. Para evitar isso, rode o script abaixo **antes de fazer o commit**:
+
+```bash
+./atualizar-versao.sh
+```
+
+Ele troca o número de versão (`?v=...`) dos arquivos no `index.html`, e o navegador passa a baixar a versão nova na hora. Se não puder rodar o script, basta trocar o número à mão nas três linhas do `index.html` que terminam em `?v=`.
+
 ---
 Feito com ❤️ por Sapo9841.
