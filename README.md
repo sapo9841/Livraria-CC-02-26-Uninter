@@ -28,14 +28,5 @@ Este projeto é uma biblioteca digital interativa desenvolvida para organizar e 
 ```
 
 As categorias são criadas automaticamente a partir do campo `categoria`, então basta repetir o nome de uma categoria existente (ou criar uma nova).
-
-## 💻 Como rodar localmente
-Não precisa instalar nada: basta abrir o `index.html` no navegador. Se preferir um servidor local:
-
-```bash
-python3 -m http.server 8000
-# depois acesse http://localhost:8000
-```
-
 ---
 Feito com ❤️ por Sapo9841.
